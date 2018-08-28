@@ -49,12 +49,12 @@ function doWhatItSays(){
 }
 
 function spotifyThis(inputParam){
-    console.log ("inputParam = "+ inputParam);
+    //console.log ("inputParam = "+ inputParam);
     spotify.search({ type: 'track', query: inputParam }, function(err, data){
       if (err) {
         return console.log('Error occurred: ' + err);
       }
-      var myJSON = JSON.stringify(data,null,2);
+     // var myJSON = JSON.stringify(data,null,2);
       var track = data.tracks.items[0];
       console.log("\n-------------------------\n");
       console.log("Artist Name= "+ track.album.artists[0].name);
